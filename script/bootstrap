@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#
+# bootstrap install things
+
+install_homebrew () {
+  if test ! $(which brew)
+  then
+    echo " Install Homebrew..."
+    if test "$(uname)" = "Darwin"
+    then
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+  else
+    echo " Homebrew has been installed"
+  fi
+}
+
+install_homebrew
+
+if [ "$(uname -s)" == "Darwin" ]
+then
+  info "installing dependencies"
+  if source bin/dot
+  then
+    success "dependencies installed"
+  else
+    fail "error installing dependencies"
+  fi
+fi
+
+echo ''
+echo '  All installed!'
