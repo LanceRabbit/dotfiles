@@ -27,7 +27,7 @@ cd ~/.dotfiles
 安裝 dotfiles:
 
 ```shell
-source ./script/bootstrap
+bash ./script/bootstrap.sh
 ```
 
 ## OS X defaults setting
