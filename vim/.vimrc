@@ -19,4 +19,4 @@ set hlsearch                      " highlight search word
 
 set t_Co=256
 
-colorscheme vividchalk 
+colorscheme hybrid 
