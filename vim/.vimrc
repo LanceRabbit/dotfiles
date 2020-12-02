@@ -18,20 +18,21 @@ set splitright
 
 " Search
 set hlsearch                      " highlight search word
-set incsearch                     " 
-set ignorecase                    " 
+set incsearch                     "
+set ignorecase                    "
 set smartcase
 
-" 
+"
 set wrap
 set linebreak
 
 " scroll
-
+set cursorline
 set scrolloff=5                   " show more
 
 " other
 set showcmd
+set noshowmode
 set cursorline
 set clipboard=unnamed            " clipboard from outside (not in vim)
 set noswapfile
@@ -39,15 +40,16 @@ set noswapfile
 " color
 syntax enable                     " Turn on syntax highlighting.
 set t_Co=256
-colorscheme hybrid 
+colorscheme hybrid
 
 " file type
 filetype on
 filetype indent on
 filetype plugin on
 
-
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
 call plug#end()
