@@ -52,4 +52,5 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
