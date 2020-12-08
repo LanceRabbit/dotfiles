@@ -36,6 +36,9 @@ set noshowmode
 set cursorline
 set clipboard=unnamed            " clipboard from outside (not in vim)
 set noswapfile
+set backspace=indent,eol,start   " backspace work on insert mode
+
+
 
 " color
 syntax enable                     " Turn on syntax highlighting.
@@ -50,8 +53,23 @@ filetype plugin on
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'thoughtbot/vim-rspec'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tomtom/tcomment_vim'
+Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
+
+
+
+
+" map key
+let mapleader = ","
