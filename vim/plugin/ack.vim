@@ -5,3 +5,5 @@ endif
 
 
 nnoremap FF :Ack<Space>
+
+noremap <Leader>f :Ack <cword><cr>

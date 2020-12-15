@@ -52,9 +52,6 @@ filetype plugin on
 
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'thoughtbot/vim-rspec'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -64,12 +61,23 @@ Plug 'tpope/vim-repeat'
 Plug 'tomtom/tcomment_vim'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
+" slim
 Plug 'slim-template/vim-slim'
+" git
 Plug 'tpope/vim-fugitive'
+
+" for ruby rails
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'thoughtbot/vim-rspec'
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 call plug#end()
-
-
 
 
 " map key
 let mapleader = ","
+
