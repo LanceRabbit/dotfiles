@@ -1,1 +1,1 @@
-noremap <C-l> :TagbarToggle<CR>
+noremap <C-e> :TagbarToggle<CR>
