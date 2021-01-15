@@ -9,3 +9,5 @@ autocmd WinLeave * setlocal nocursorline
 
 " 存檔時自動把行末多餘的空白刪除
 autocmd BufWritePre * :%s/\s\+$//e
+
+autocmd BufRead,BufNewFile *.rb set filetype=ruby
