@@ -1,4 +1,4 @@
-nmap <C-P> :FZF<CR>
+nmap <S-S> :FZF<CR>
 " fzf settings
 " This is the default extra key bindings
 let g:fzf_action = {

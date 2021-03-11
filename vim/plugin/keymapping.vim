@@ -1,5 +1,5 @@
-nnoremap <C-l> :tabn<CR>
-nnoremap <C-h> :tabp<CR>
+nnoremap <S-l> :tabn<CR>
+nnoremap <S-h> :tabp<CR>
 " clear search
 nnoremap <C-c> :noh<CR>
 " jump to the end of line
@@ -8,6 +8,13 @@ nnoremap 11 <S-$>
 nnoremap 22 <S-^>
 " copy all line
 nnoremap ca gg"*yG<CR>
+
+" select block and remove
+nnoremap rvb vg_c
+
+nnoremap cp' vi'p
+
+vnoremap $ g_
 
 nnoremap wh <C-w>h
 nnoremap wj <C-w>j
