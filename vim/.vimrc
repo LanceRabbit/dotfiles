@@ -1,6 +1,7 @@
 set nocompatible                  " Turn off compatible with vi.
 
-set number                        " Show line numbers.
+"set number                        " Show line numbers.
+set relativenumber
 set ruler                         " Show cursor position.
 
 set autoindent                    " autoindent on return/enter
@@ -66,7 +67,7 @@ Plug 'mileszs/ack.vim'
 " slim
 Plug 'slim-template/vim-slim'
 " git
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " for ruby rails
 Plug 'vim-ruby/vim-ruby'
@@ -74,7 +75,7 @@ Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 Plug 'garbas/vim-snipmate'
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
+" Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 call plug#end()
