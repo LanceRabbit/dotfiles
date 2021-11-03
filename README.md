@@ -30,6 +30,35 @@ cd ~/.dotfiles
 bash ./script/bootstrap.sh
 ```
 
+## Git/ZSH
+
+### ZSH
+
+```shell
+cp ~/.dotfiles/zsh/.zshrc .
+```
+
+### Git
+
+```shell
+cp ~/.dotfiles/git/.gitconfig .
+```
+
+## Vim
+
+softlink folder `vim` and file `.vimrc`
+
+```shell
+ln -s .dotfiles/vim ~/.vim
+ln -s .dotfiles/vim/.vimrc ~/.vimrc
+```
+
+install plugged by run below cmd on vim cmd line.
+
+```shell
+:PlugInstall
+```
+
 ## OS X defaults setting
 
 執行 `$ ./osx/set-defaults.sh` 之後，會將 Mac OS X 的系統設置改變，細節參考下方說明 [Setting](Setting)
