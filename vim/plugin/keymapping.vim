@@ -3,11 +3,11 @@ nnoremap <S-h> :tabp<CR>
 " clear search
 nnoremap <C-c> :noh<CR>
 " jump to the end of line
-nnoremap 11 <S-$>
+nnoremap s] <S-$>
 " jump to the head of line
-nnoremap 22 <S-^>
+nnoremap s[ <S-^>
 " copy all line
-nnoremap ca gg"*yG<CR>
+nnoremap cal gg"*yG<CR>
 
 " select block and remove
 nnoremap rvb vg_c

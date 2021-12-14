@@ -69,6 +69,8 @@ Plug 'slim-template/vim-slim'
 " git
 " Plug 'tpope/vim-fugitive'
 
+Plug 'zivyangll/git-blame.vim'
+
 " for ruby rails
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -84,3 +86,4 @@ call plug#end()
 " map key
 let mapleader = ","
 
+let g:mapleader = ","
