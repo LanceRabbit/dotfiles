@@ -7,3 +7,5 @@
 [alias]
   coi = "!git checkout $(git branch | cut -c 3- | peco)"
   rbi = "!git rebase -i $(git rev-parse --short HEAD~$@) #"
+[core]
+	excludesfile = /Users/lancelin/.gitignore_global
