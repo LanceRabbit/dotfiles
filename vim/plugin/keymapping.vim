@@ -10,9 +10,29 @@ nnoremap s[ <S-^>
 nnoremap cal gg"*yG<CR>
 
 " select block and remove
-nnoremap rvb vg_c
+nnoremap rb vg_c
+nnoremap sb vg_
 
 nnoremap cp' vi'p
+
+" add quote
+" nnoremap '' ysiw'
+nnoremap qs :silent! normal mpea'<Esc>bi'<Esc>`pl
+nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
+vnoremap '' <Esc>`>a'<Esc>`<i'<Esc>
+vnoremap "" <Esc>`>a"<Esc>`<i"<Esc>
+
+
+" remove quotes from a word
+nnoremap dq :silent! normal mpeld bhd `ph<CR>
+
+" comma then w writes and quits your file
+nnoremap <leader>w :wq!<Enter>
+" similar here, comma then q quits without saving
+nnoremap <leader>q :q!<Enter>
+
+" change to normal mode
+imap jj <esc>
 
 vnoremap $ g_
 
