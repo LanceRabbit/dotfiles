@@ -68,7 +68,7 @@ Plug 'mileszs/ack.vim'
 Plug 'slim-template/vim-slim'
 " git
 " Plug 'tpope/vim-fugitive'
-
+" <leader>s to display who code
 Plug 'zivyangll/git-blame.vim'
 
 " for ruby rails

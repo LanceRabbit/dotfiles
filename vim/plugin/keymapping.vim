@@ -22,12 +22,15 @@ nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
 vnoremap '' <Esc>`>a'<Esc>`<i'<Esc>
 vnoremap "" <Esc>`>a"<Esc>`<i"<Esc>
 
+nnoremap nt :tabe<CR>
+nnoremap vn :vnew<CR>
+nnoremap hn :new<CR>
 
 " remove quotes from a word
 nnoremap dq :silent! normal mpeld bhd `ph<CR>
 
 " comma then w writes and quits your file
-nnoremap <leader>w :wq!<Enter>
+nnoremap <leader>w :w!<Enter>
 " similar here, comma then q quits without saving
 nnoremap <leader>q :q!<Enter>
 
