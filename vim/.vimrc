@@ -55,6 +55,10 @@ filetype plugin on
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+" 看到 git 版本資訊
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" 自動補全括號的外掛，包括小括號，中括號，以及花括號
+Plug 'jiangmiao/auto-pairs'
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
