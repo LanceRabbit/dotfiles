@@ -75,6 +75,9 @@ Plug 'slim-template/vim-slim'
 " <leader>s to display who code
 Plug 'zivyangll/git-blame.vim'
 
+" for golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " for ruby rails
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
