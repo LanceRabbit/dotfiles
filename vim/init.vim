@@ -60,8 +60,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " 自動補全括號的外掛，包括小括號，中括號，以及花括號
 Plug 'jiangmiao/auto-pairs'
 " Plug 'ctrlpvim/ctrlp.vim'
+" search files
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -71,9 +73,9 @@ Plug 'mileszs/ack.vim'
 " slim
 Plug 'slim-template/vim-slim'
 " git
-" Plug 'tpope/vim-fugitive'
 " <leader>s to display who code
-Plug 'zivyangll/git-blame.vim'
+Plug 'tpope/vim-fugitive'
+" Plug 'zivyangll/git-blame.vim'
 
 " for golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

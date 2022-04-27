@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -94,11 +96,13 @@ alias gcd="git checkout develop"
 alias gcm="git checkout master"
 alias gst="git stash"
 alias gstp="git stash pop"
+alias gcp="git cherry-pick"
 
 alias vim="nvim"
 alias vi="nvim"
 
 alias s_zshrc="source ~/.zshrc"
+alias dockerapp="open -a Docker"
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -142,3 +146,13 @@ export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
+
+
+# For Golang Env
+export GOPATH=$HOME/golang
+export GOROOT=/opt/homebrew/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin

@@ -26,8 +26,15 @@ nnoremap nt :tabe<CR>
 nnoremap vn :vnew<CR>
 nnoremap hn :new<CR>
 
+nnoremap <leader>b :Git blame<Enter>
+" exit Git blame
+nnoremap <leader>b1 :b1<Enter>
+
 " remove quotes from a word
-nnoremap dq :silent! normal mpeld bhd `ph<CR>
+" nnoremap dq :silent! normal mpeld bhd `ph<CR>
+" using surround to remove
+" ds + B: delete a surrounding
+" cs: change a surrounding
 
 " comma then w writes and quits your file
 nnoremap <leader>w :w!<Enter>
