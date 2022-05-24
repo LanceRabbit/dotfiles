@@ -77,6 +77,8 @@ Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-fugitive'
 " Plug 'zivyangll/git-blame.vim'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " for golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
