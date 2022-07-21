@@ -1,7 +1,7 @@
 set nocompatible                  " Turn off compatible with vi.
 
 "set number                        " Show line numbers.
-set relativenumber
+set number relativenumber
 set ruler                         " Show cursor position.
 
 set autoindent                    " autoindent on return/enter
@@ -34,11 +34,9 @@ set scrolloff=5                   " show more
 " other
 set showcmd
 set noshowmode
-set cursorline
 set clipboard=unnamed            " clipboard from outside (not in vim)
 set noswapfile
 set backspace=indent,eol,start   " backspace work on insert mode
-
 
 
 " color
@@ -63,6 +61,8 @@ Plug 'jiangmiao/auto-pairs'
 " search files
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
