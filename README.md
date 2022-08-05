@@ -47,10 +47,12 @@ cp ~/.dotfiles/git/.gitconfig .
 ## Vim
 
 softlink folder `vim` and file `.vimrc`
+softlink folder for nvim
 
 ```shell
 ln -s .dotfiles/vim ~/.vim
 ln -s .dotfiles/vim/.vimrc ~/.vimrc
+ln -s .dotfiles/vim ~/.config/nvim
 ```
 
 install plugged by run below cmd on vim cmd line.

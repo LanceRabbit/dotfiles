@@ -38,7 +38,6 @@ set clipboard=unnamed            " clipboard from outside (not in vim)
 set noswapfile
 set backspace=indent,eol,start   " backspace work on insert mode
 
-
 " color
 syntax enable                     " Turn on syntax highlighting.
 set t_Co=256
@@ -48,6 +47,10 @@ colorscheme hybrid
 filetype on
 filetype indent on
 filetype plugin on
+
+" spell
+autocmd BufRead,BufNewFile *.rb setlocal spell spelllang=en_us filetype=ruby
+autocmd BufRead,BufNewFile *.es6 setlocal spell spelllang=en_us filetype=javascript
 
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
@@ -79,6 +82,8 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'neovim/nvim-lspconfig'
+
 " for golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -100,3 +105,10 @@ let g:snipMate = { 'snippet_version': 1 }
 let mapleader = ","
 
 let g:mapleader = ","
+
+" lua require'nvim_lsp'.solargraph.setup{}
+" lua require'lspconfig'.solargraph.setup{}
+
+lua << EOF
+require'configs'
+EOF
