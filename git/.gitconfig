@@ -13,3 +13,4 @@
 
 [core]
 	excludesfile = /Users/lancelin/.gitignore_global
+	editor = vim

@@ -3,7 +3,6 @@ set nocompatible                  " Turn off compatible with vi.
 "set number                        " Show line numbers.
 set number relativenumber
 set ruler                         " Show cursor position.
-
 set autoindent                    " autoindent on return/enter
 
 " tab and space
@@ -48,9 +47,10 @@ filetype on
 filetype indent on
 filetype plugin on
 
-" spell
+" spell & set filetype
 autocmd BufRead,BufNewFile *.rb setlocal spell spelllang=en_us filetype=ruby
 autocmd BufRead,BufNewFile *.es6 setlocal spell spelllang=en_us filetype=javascript
+autocmd BufRead,BufNewFile *html.erb setlocal spell spelllang=en_us filetype=html
 
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')

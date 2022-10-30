@@ -15,6 +15,12 @@ nnoremap sb vg_
 
 nnoremap cp' vi'p
 
+" remove the method wrapped in method
+" example:
+" a_method(b_method("delete"))
+" move corsor to b_method, and use 'dws' that will remove the b_method()
+nnoremap dws :silent! normal dt( \| ds(<CR>
+
 " add quote
 " nnoremap '' ysiw'
 nnoremap qs :silent! normal mpea'<Esc>bi'<Esc>`pl
