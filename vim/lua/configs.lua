@@ -1,11 +1,12 @@
 require'lsp_ruby'
--- require'core/options'
 require('Comment').setup()
 
+require('plugins')
 -- require new configuration
 local modules = {
   'core.options',
   'core.keymapping',
+  'core.autocmds',
 }
 
 for _, module in ipairs(modules) do

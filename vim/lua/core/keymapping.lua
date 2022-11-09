@@ -4,6 +4,14 @@
 
 local opts = { noremap = true, silent = true }
 
+
+vim.keymap.set('n', '<C-u>', [[:NvimTreeToggle<CR>]], {})
+
+function _G.smart_tab()
+    return vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+end
+vim.keymap.set('n', 'spath', [[:echo v:lua.smart_tab()<CR>]])
+
 -- save file
 vim.keymap.set('n', '<Leader>w', [[:write<CR>]])
 -- exit without save
@@ -48,6 +56,10 @@ vim.keymap.set('n', 'qs', [[normal mpea'<ESC>bi'<ESC>`pl]], opts)
 vim.keymap.set('n', 'qd', [[normal mpea"<ESC>bi"<ESC>`pl]], opts)
 vim.keymap.set('v', '\'\'', [[<ESC>`>a'<ESC>`<i'<ESC>]])
 vim.keymap.set('v', '\"\"', [[<ESC>`>a"<ESC>`<i"<ESC>]])
+
+-- delete last character.
+-- vim.keymap.set('v', 'dl', [[:norm $x<CR>]])
+vim.keymap.set('v', 'dl', [[:normal $x<CR>]])
 
 -- move the current line of code to up or down
 vim.keymap.set('n', '<S-U>', [[ddkkp]], opts)

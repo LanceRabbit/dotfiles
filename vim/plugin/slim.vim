@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+" autocmd BufNewFile,BufRead *.slim setlocal filetype=slim

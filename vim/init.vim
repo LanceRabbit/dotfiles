@@ -48,10 +48,10 @@
 " filetype plugin on
 "
 " spell & set filetype
-autocmd BufRead,BufNewFile *.rb setlocal spell spelllang=en_us filetype=ruby
-autocmd BufRead,BufNewFile *.es6 setlocal spell spelllang=en_us filetype=javascript
-autocmd BufRead,BufNewFile *html.erb setlocal spell spelllang=en_us filetype=html
-
+" autocmd BufRead,BufNewFile *.rb setlocal spell spelllang=en_us filetype=ruby
+" autocmd BufRead,BufNewFile *.es6 setlocal spell spelllang=en_us filetype=javascript
+" autocmd BufRead,BufNewFile *html.erb setlocal spell spelllang=en_us filetype=html
+"
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
@@ -67,7 +67,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'nathanaelkane/vim-indent-guides'
 
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 " Plug 'tomtom/tcomment_vim'
@@ -79,10 +79,6 @@ Plug 'slim-template/vim-slim'
 " <leader>s to display who code
 Plug 'tpope/vim-fugitive'
 " Plug 'zivyangll/git-blame.vim'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'neovim/nvim-lspconfig'
 
 " for golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -97,12 +93,14 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
 Plug 'numToStr/Comment.nvim'
 call plug#end()
 
 
 
-let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .']
+" let g:rails_ctags_arguments = ['--languages=ruby --exclude=.git --exclude=log .']
 
 " fix snipMate waring
 " let g:snipMate = { 'snippet_version': 1 }

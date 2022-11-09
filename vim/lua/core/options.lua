@@ -62,6 +62,22 @@ opt.clipboard:append("unnamedplus")
 vim.o.termguicolors = true
 vim.cmd [[colorscheme hybrid]]
 
+
+-- syntax highlighter
+g.go_highlight_functions = 1
+g.go_highlight_methods = 1
+g.go_highlight_structs = 1
+g.go_highlight_operators = 1
+g.go_highlight_build_constraints = 1
+
+-- Auto formatting and importing
+g.go_fmt_autosave = 1
+g.go_fmt_command = "goimports"
+
+
+g.rails_ctags_arguments = [['--languages=ruby --exclude=.git --exclude=log .']]
+
+
 -- FIX
 
 -- fixed ctags not working on Neovim
@@ -71,3 +87,5 @@ opt.tags:append('tags')
 
 -- fix snipMate waring
 -- g.snipMate = { 'snippet_version': 1 }
+-- g.snipMate = [['snippet_version'=1]]
+
