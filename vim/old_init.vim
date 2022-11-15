@@ -55,7 +55,7 @@
 " Initialize plugin system
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 " 看到 git 版本資訊
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " 自動補全括號的外掛，包括小括號，中括號，以及花括號
@@ -87,7 +87,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
-Plug 'garbas/vim-snipmate'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
@@ -96,6 +95,8 @@ Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'numToStr/Comment.nvim'
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 call plug#end()
 
 

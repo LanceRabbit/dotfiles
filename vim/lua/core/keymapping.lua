@@ -4,13 +4,11 @@
 
 local opts = { noremap = true, silent = true }
 
-
-vim.keymap.set('n', '<C-u>', [[:NvimTreeToggle<CR>]], {})
-
-function _G.smart_tab()
-    return vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-end
-vim.keymap.set('n', 'spath', [[:echo v:lua.smart_tab()<CR>]])
+-- just a test
+-- function _G.smart_tab()
+--     return vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+-- end
+-- vim.keymap.set('n', 'spath', [[:echo v:lua.smart_tab()<CR>]])
 
 -- save file
 vim.keymap.set('n', '<Leader>w', [[:write<CR>]])
