@@ -56,8 +56,8 @@ return packer.startup(function(use)
   -- vim version END
 
   -- LSP
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use { "nvim-lua/plenary.nvim", module = "plenary" }
+  -- use {'neoclide/coc.nvim', branch = 'release'}
+  -- use { "nvim-lua/plenary.nvwm", module = "plenary" }
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
   -- Telescope
@@ -70,12 +70,16 @@ return packer.startup(function(use)
   -- }
   use {
     'numToStr/Comment.nvim',
+    config = require('config.comment')
   }
   use {
-    'nvim-tree/nvim-tree.lua'
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    config = require('config.nvim-tree')
   }
 
-  use 'nvim-tree/nvim-web-devicons'
 
   -- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
