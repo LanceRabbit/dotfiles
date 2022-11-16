@@ -55,6 +55,19 @@ return packer.startup(function(use)
   use {'honza/vim-snippets'}
   -- vim version END
 
+
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+
   -- LSP
   -- use {'neoclide/coc.nvim', branch = 'release'}
   -- use { "nvim-lua/plenary.nvwm", module = "plenary" }
@@ -70,14 +83,19 @@ return packer.startup(function(use)
   -- }
   use {
     'numToStr/Comment.nvim',
-    config = require('config.comment')
+    config = function()
+      require('config.comment')
+    end
   }
+
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    config = require('config.nvim-tree')
+    config = function()
+      require('config.nvim-tree')
+    end
   }
 
 

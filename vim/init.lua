@@ -1,5 +1,6 @@
 require'plugins'
 require'config.lsp'
+require'config.cmp'
 
 -- require custom configuration
 local modules = {
@@ -14,4 +15,5 @@ for _, module in ipairs(modules) do
     error('Error loading ' .. module .. '\n\n' .. err)
   end
 end
+
 
