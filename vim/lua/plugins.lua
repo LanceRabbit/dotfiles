@@ -34,7 +34,8 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use 'wbthomason/packer.nvim'                            -- Package manager
+   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } --  Package manager
+   use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" } -- Useful lua functions used by lots of plugins
 
   -- vim version START
   use {'vim-airline/vim-airline'}
@@ -62,6 +63,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use { "hrsh7th/cmp-nvim-lsp", commit = "3cf38d9c957e95c397b66f91967758b31be4abe6" }
+	use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -69,23 +72,49 @@ return packer.startup(function(use)
 
 
   -- LSP
-  -- use {'neoclide/coc.nvim', branch = 'release'}
-  -- use { "nvim-lua/plenary.nvwm", module = "plenary" }
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+	use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
+  use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12"} -- simple to use language server installer
+  use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
+	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
+  use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
 
   -- Telescope
   use {
-     'nvim-telescope/telescope.nvim', tag = '0.1.0'
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    config = function()
+      require('config.telescope')
+    end
   }
-  -- use {
-  --   "windwp/nvim-autopairs",
-  --   config = function() require("nvim-autopairs").setup {} end
-  -- }
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+    config = function()
+      require('config.treesitter')
+    end
+  }
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require('config.autopairs')
+    end
+  }
   use {
     'numToStr/Comment.nvim',
+    commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67",
     config = function()
       require('config.comment')
     end
+  }
+
+  use {
+    "akinsho/bufferline.nvim",
+    commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4",
+    config = function()
+      require('config.bufferline')
+    end
+
   }
 
   use {
