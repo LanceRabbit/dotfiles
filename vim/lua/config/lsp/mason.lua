@@ -31,6 +31,8 @@ local function rust_lsp()
       on_attach = function(_, bufnr)
         -- Hover actions
         vim.keymap.set("n", "<Leader>b", rust_tool.hover_actions.hover_actions, { buffer = bufnr })
+        vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+
         -- Code action groups
         vim.keymap.set("n", "<Leader>a", rust_tool.code_action_group.code_action_group, { buffer = bufnr })
       end,
@@ -112,7 +114,7 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
-  if server == 'rust_analyzer'  then
+  if server == 'rust_analyzer' then
     rust_lsp()
   else
     lspconfig[server].setup(opts)
