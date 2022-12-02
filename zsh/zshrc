@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -76,12 +76,6 @@ plugins=(git brew history macos zsh-autosuggestions zsh-completions zsh-syntax-h
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# set encode for item2
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-
 # User configuration
 # for git
 alias gc="git checkout "
@@ -104,6 +98,13 @@ alias vi="nvim"
 alias s_zshrc="source ~/.zshrc"
 alias dockerapp="open -a Docker"
 
+
+# You may need to manually set your language environment
+# set encode for item2
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+[[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -155,8 +156,10 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/lancelin/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# Fig post block. Keep at the bottom of this file.
+# [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+eval "$(starship init zsh)"

@@ -25,8 +25,8 @@ vim.keymap.set('n', '<S-l>', [[:tabn<CR>]], opts)
 vim.keymap.set('n', '<S-h>', [[:tabp<CR>]], opts)
 -- tab
 vim.keymap.set('n', 'nt', [[:tabe<CR>]], opts)
-vim.keymap.set('n', 'vn', [[:vnew<CR>]], opts)
-vim.keymap.set('n', 'hn', [[:new<CR>]], opts)
+vim.keymap.set('n', 'nv', [[:vnew<CR>]], opts)
+vim.keymap.set('n', 'nh', [[:new<CR>]], opts)
 
 -- jump on windows
 vim.keymap.set('n', 'wh', [[<C-w>h]], opts)
@@ -62,6 +62,17 @@ vim.keymap.set('v', 'dl', [[:normal $x<CR>]])
 -- move the current line of code to up or down
 vim.keymap.set('n', '<S-U>', [[ddkkp]], opts)
 vim.keymap.set('n', '<S-D>', [[ddp]], opts)
+
+vim.keymap.set('v', '<C-j', ':m .+1<CR>==')
+vim.keymap.set('v', '<C-k>', ':m .-2<CR>==')
+
+
+-- Resize with arrows
+-- vim.keymap.set("n", "u2", ":resize -2<CR>", opts)
+-- vim.keymap.set("n", "d2", ":resize +2<CR>", opts)
+-- vim.keymap.set("n", "l2", ":vertical resize -2<CR>", opts)
+-- vim.keymap.set("n", "r2", ":vertical resize +2<CR>", opts)
+
 
 -- hidden text
 vim.keymap.set('n', 'zf', [[zfip]], opts)

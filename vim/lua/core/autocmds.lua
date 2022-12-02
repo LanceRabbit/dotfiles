@@ -62,3 +62,11 @@ augroup('Golang', {
     command = [[setlocal noexpandtab tabstop=8 shiftwidth=8]]
   }
 })
+
+-- augroup('Rust',{
+--   {
+--     event = { 'BufRead', 'BufNewFile' },
+--     pattern = { '*.rs' },
+--     command = [[setlocal noexpandtab tabstop=8 shiftwidth=8]]
+--   }
+-- })

@@ -23,6 +23,7 @@ opt.compatible = false              -- set nocompatible
 
 -- set number
 opt.ruler = true                    -- Show cursor position.
+opt.number = true           -- set number relativenumber
 opt.relativenumber = true           -- set number relativenumber
 opt.autoindent = true               -- autoindent on return/enter
 

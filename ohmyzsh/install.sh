@@ -8,7 +8,9 @@ then
   # git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   git clone git://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
-  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  ln -s ~/.dotfiles/zshrc ~/.zshrc
+  ln -s ~/.dotfiles/zsh ~/.zsh
 
   mkdir -p .oh-my-zsh/custom/plugins
   cd .oh-my-zsh/custom/plugins
@@ -19,6 +21,7 @@ then
 
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+  # To change the default shell to zsh
   chsh -s /bin/zsh
 
 else
