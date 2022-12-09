@@ -21,7 +21,7 @@ do
     echo "Missing - symbolic the $config"
     # echo $PWD/$config
     # f: force, overriding file directly
-    ln -s $PWD/$config $path
+    ln -s $PWD/git/$config $path
   fi
 done
 
