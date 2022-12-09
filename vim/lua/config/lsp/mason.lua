@@ -72,6 +72,7 @@ end
 local servers = {
 	"sumneko_lua",
   "solargraph",
+  "ruby_ls",
   "rust_analyzer",
 }
 
