@@ -34,26 +34,28 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } --  Package manager
-   use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" } -- Useful lua functions used by lots of plugins
+  use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } --  Package manager
+  use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" } -- Useful lua functions used by lots of plugins
 
   -- vim version START
-  use {'vim-airline/vim-airline'}
+  use { 'vim-airline/vim-airline' }
 
-  use {'mileszs/ack.vim'}
-  use {'tpope/vim-fugitive'}
-  use {'junegunn/fzf'}
-  use {'junegunn/fzf.vim'}
-  use {'tpope/vim-surround'}
-  use {'tpope/vim-repeat'}
-  use {'slim-template/vim-slim'}
-  use {'vim-ruby/vim-ruby'}
-  use {'tpope/vim-rails'}
+  use { 'mileszs/ack.vim' }
+  use { 'tpope/vim-fugitive' }
+  use { 'junegunn/fzf' }
+  use { 'junegunn/fzf.vim' }
+  use { 'tpope/vim-surround' }
+  use { 'tpope/vim-repeat' }
+  use { 'slim-template/vim-slim' }
+  use { 'vim-ruby/vim-ruby' }
+  use { 'tpope/vim-rails' }
 
-  use {'MarcWeber/vim-addon-mw-utils'}
-  use {'tomtom/tlib_vim'}
-  use {'garbas/vim-snipmate'}
-  use {'honza/vim-snippets'}
+  use { 'MarcWeber/vim-addon-mw-utils' }
+  use { 'tomtom/tlib_vim' }
+  use { 'garbas/vim-snipmate' }
+  use { 'honza/vim-snippets' }
+  -- select mulit line
+  use { 'mg979/vim-visual-multi' }
   -- vim version END
 
 
@@ -79,7 +81,7 @@ return packer.startup(function(use)
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
 
   -- for rust
-  use { 'simrat39/rust-tools.nvim'}
+  use { 'simrat39/rust-tools.nvim' }
   use { 'mfussenegger/nvim-dap' }
 
   -- Telescope

@@ -15,6 +15,7 @@ vim.keymap.set('n', '<Leader>w', [[:write<CR>]])
 -- exit without save
 vim.keymap.set('n', '<Leader>x', [[:exit<CR>]], opts)
 -- vim.keymap.set('n', '<Leader>e', '<C-W>q<CR>')
+vim.keymap.set('n', '<Leader>qa', [[:qall!<CR>]], opts)
 
 
 -- Git blame
