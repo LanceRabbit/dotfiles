@@ -49,7 +49,7 @@ M.setup = function()
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
 		border = "rounded",
 	})
-end
+  end
 
 
 local function lsp_keymaps(bufnr)
@@ -57,7 +57,7 @@ local function lsp_keymaps(bufnr)
 	local keymap = vim.api.nvim_buf_set_keymap
 	keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	keymap(bufnr, "n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
@@ -77,9 +77,18 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
-	if client.name == "sumneko_lua" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
+	-- if client.name == "sumneko_lua" then
+	-- 	client.server_capabilities.documentFormattingProvider = false
+	-- end
+
+  -- format on save
+  vim.api.nvim_create_autocmd('BufWritePre', {
+    group = vim.api.nvim_create_augroup('LspFormatting', { clear = true }),
+    buffer = bufnr,
+    callback = function()
+      vim.lsp.buf.format()
+    end
+  })
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")

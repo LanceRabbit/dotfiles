@@ -1,4 +1,3 @@
-
 -- TODO: keymap function
 --
 
@@ -91,4 +90,3 @@ vim.keymap.set('n', 'sb', [[vg_]], opts)
 -- a_method(b_method("delete"))
 -- move corsor to b_method, and use 'dws' that will remove the b_method()
 vim.keymap.set('n', 'dws', [[normal dt( \| ds(<CR<]], opts)
-

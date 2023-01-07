@@ -19,16 +19,16 @@ vim.cmd([[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-	return
+  return
 end
 
 -- Have packer use a popup window
 packer.init({
-	display = {
-		open_fn = function()
-			return require("packer.util").float({ border = "rounded" })
-		end,
-	},
+  display = {
+    open_fn = function()
+      return require("packer.util").float({ border = "rounded" })
+    end,
+  },
 })
 
 
@@ -66,7 +66,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use { "hrsh7th/cmp-nvim-lsp", commit = "3cf38d9c957e95c397b66f91967758b31be4abe6" }
-	use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
+  use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -74,10 +74,10 @@ return packer.startup(function(use)
 
 
   -- LSP
-	use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
-  use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12"} -- simple to use language server installer
+  use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP
+  use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12" } -- simple to use language server installer
   use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
-	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
+  -- use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
 
   -- for rust
@@ -91,6 +91,9 @@ return packer.startup(function(use)
       require('config.telescope')
     end
   }
+
+  -- tools
+  -- use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
   -- Treesitter
   use {
@@ -145,9 +148,8 @@ return packer.startup(function(use)
   })
 
   -- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
+  -- Put this at the end after all plugins
   if is_bootstrap then
     require('packer').sync()
   end
 end)
-
