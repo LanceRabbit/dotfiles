@@ -72,6 +72,7 @@ end
 local servers = {
   "solargraph",
   "rust_analyzer",
+  'sumneko_lua',
 }
 
 local settings = {
@@ -105,22 +106,22 @@ local opts = {
   on_attach = on_attach
 }
 
-require('mason-lspconfig').setup_handlers({
-  function(server_name)
-    require('lspconfig')[server_name].setup(opts)
-  end,
-  sumneko_lua = function()
-    require('lspconfig').sumneko_lua.setup(vim.tbl_extend('force', opts, {
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { 'vim' }
-          }
-        }
-      }
-    }))
-  end,
-})
+-- require('mason-lspconfig').setup_handlers({
+--   function(server_name)
+--     require('lspconfig')[server_name].setup(opts)
+--   end,
+--   sumneko_lua = function()
+--     require('lspconfig').sumneko_lua.setup(vim.tbl_extend('force', opts, {
+--       settings = {
+--         Lua = {
+--           diagnostics = {
+--             globals = { 'vim' }
+--           }
+--         }
+--       }
+--     }))
+--   end,
+-- })
 
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
@@ -133,7 +134,8 @@ for _, server in pairs(servers) do
 
   local require_ok, conf_opts = pcall(require, "config.lsp.settings." .. server)
   if require_ok then
-    opts = vim.tbl_deep_extend("force", conf_opts, opts)
+    opts = vim.tbl_extend("force", conf_opts, opts)
+    -- opts = vim.tbl_deep_extend("force", conf_opts, opts)
   end
 
   if server == 'rust_analyzer' then
