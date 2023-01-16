@@ -147,6 +147,14 @@ return packer.startup(function(use)
     }
   })
 
+  use({
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require('config.toggle-term')
+    end,
+    tag = '*'
+  })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if is_bootstrap then
