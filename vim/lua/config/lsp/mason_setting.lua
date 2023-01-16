@@ -71,7 +71,6 @@ end
 
 local servers = {
   "solargraph",
-  "ruby_ls",
   "rust_analyzer",
 }
 
@@ -93,7 +92,6 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     'sumneko_lua',
     'solargraph',
-    'ruby_ls',
     'rust_analyzer',
   },
   automatic_installation = true,
