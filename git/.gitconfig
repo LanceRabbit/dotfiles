@@ -7,6 +7,8 @@
 [alias]
   coi = "!git checkout $(git branch | cut -c 3- | peco)"
   rbi = "!git rebase -i $(git rev-parse --short HEAD~$@) #"
+  # order by date
+  # git log -4 --pretty=format:'%at %h' | sort -g | cut -d ' ' -f 2 | pbcopy
   gid = "!git log -$@ --pretty=format:'%h' | cut -d ' ' -f 1 | pbcopy #"
   # $1: show log lines, $2: specific line
   sid = "!git log -$1 --pretty=format:'%h' | cut -d ' ' -f 1 | sed -n $2p | pbcopy #"

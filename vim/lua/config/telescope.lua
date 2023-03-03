@@ -4,7 +4,14 @@ if not status_ok then
 end
 
 -- telescope.load_extension('live_grep_args')
-telescope.setup{}
+telescope.setup {
+  pickers = {
+    find_files = {
+      -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
+      find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+    },
+  },
+}
 
 vim.keymap.set('n', '<leader>ff', [[:Telescope find_files<CR>]], {})
 vim.keymap.set('n', '<leader>fg', [[:Telescope live_grep<CR>]], {})

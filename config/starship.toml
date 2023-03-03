@@ -1,6 +1,8 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
+command_timeout = 1000
+
 # Customizing the prompt
 # format = "$all"
 format = """$env_var $all"""

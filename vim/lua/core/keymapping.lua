@@ -63,7 +63,7 @@ vim.keymap.set('v', 'dl', [[:normal $x<CR>]])
 vim.keymap.set('n', '<S-U>', [[ddkkp]], opts)
 vim.keymap.set('n', '<S-D>', [[ddp]], opts)
 
-vim.keymap.set('v', '<C-j', ':m .+1<CR>==')
+vim.keymap.set('v', '<C-j>', ':m .+1<CR>==')
 vim.keymap.set('v', '<C-k>', ':m .-2<CR>==')
 
 
