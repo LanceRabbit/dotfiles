@@ -4,3 +4,11 @@ if not status_ok then
 end
 
 comment.setup()
+
+local status_ok, ft = pcall(require, "Comment.ft")
+if not status_ok then
+	return
+end
+
+ft.yaml = '#%s'
+ft.tf = '#%s'

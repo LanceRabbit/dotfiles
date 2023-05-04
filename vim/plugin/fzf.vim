@@ -3,6 +3,7 @@
 nnoremap <S-S> :GFiles --cached --others --exclude-standard<ENTER>
 " find the text inside of any files.
 nnoremap <leader>fa :Ag<CR>
+nnoremap <leader>fr :Rg<CR>
 nnoremap <leader>ft :Tags<CR>
 " fzf settings
 " This is the default extra key bindings
@@ -44,3 +45,15 @@ let g:fzf_tags_command = 'ctags -R'
 " - Note that this array is passed as arguments to fzf#vim#with_preview function.
 " - To learn more about preview window options, see `--preview-window` section of `man fzf`.
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --hidden --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--disabled', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  let spec = fzf#vim#with_preview(spec, 'right', 'ctrl-/')
+  call fzf#vim#grep(initial_command, 1, spec, a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)

@@ -44,6 +44,8 @@ return packer.startup(function(use)
   use { 'tpope/vim-fugitive' }
   use { 'junegunn/fzf' }
   use { 'junegunn/fzf.vim' }
+
+  -- tpope/vim-surround would be replace with "kylechui/nvim-surround"
   use { 'tpope/vim-surround' }
   use { 'tpope/vim-repeat' }
   use { 'slim-template/vim-slim' }
@@ -57,7 +59,6 @@ return packer.startup(function(use)
   -- select mulit line
   use { 'mg979/vim-visual-multi' }
   -- vim version END
-
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -154,6 +155,16 @@ return packer.startup(function(use)
     end,
     tag = '*'
   })
+
+  -- use({
+  --   "kylechui/nvim-surround",
+  --   tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  --   config = function()
+  --       require("nvim-surround").setup({
+  --           -- Configuration here, or leave empty to use defaults
+  --       })
+  --   end
+  -- })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

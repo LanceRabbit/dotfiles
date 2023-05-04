@@ -12,6 +12,12 @@
   gid = "!git log -$@ --pretty=format:'%h' | cut -d ' ' -f 1 | pbcopy #"
   # $1: show log lines, $2: specific line
   sid = "!git log -$1 --pretty=format:'%h' | cut -d ' ' -f 1 | sed -n $2p | pbcopy #"
+  # cherry-pick all gid, e.g. git pick-all a123a b456b
+  pick-all = "! f() { \
+    for l in $@; do \
+      git cherry-pick $l -m 1; \
+    done; \
+    }; f"
 
 [core]
 	excludesfile = /Users/lancelin/.gitignore_global

@@ -73,6 +73,7 @@ local servers = {
   "solargraph",
   "rust_analyzer",
   'sumneko_lua',
+  'terraformls',
 }
 
 local settings = {
