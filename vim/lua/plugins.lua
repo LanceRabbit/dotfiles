@@ -124,7 +124,6 @@ return packer.startup(function(use)
     config = function()
       require('config.bufferline')
     end
-
   }
 
   use {
@@ -137,7 +136,7 @@ return packer.startup(function(use)
     end
   }
 
-  use({
+  use {
     "folke/noice.nvim",
     config = function()
       require('config.noice')
@@ -146,15 +145,17 @@ return packer.startup(function(use)
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     }
-  })
+  }
 
-  use({
+  use {
     'akinsho/toggleterm.nvim',
     config = function()
       require('config.toggle-term')
     end,
     tag = '*'
-  })
+  }
+
+  use { 'f-person/git-blame.nvim', commit = "06c20ea71a4519fc60caba9ac688f2f6404f03d5" }
 
   -- use({
   --   "kylechui/nvim-surround",
