@@ -29,9 +29,15 @@ local function rust_lsp()
     server = {
       -- on_attach = require("config.lsp.handlers").on_attach,
       on_attach = function(_, bufnr)
+        local opts = { noremap = true, silent = true }
         -- Hover actions
         vim.keymap.set("n", "<Leader>b", rust_tool.hover_actions.hover_actions, { buffer = bufnr })
-        vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+        vim.keymap.set("n", "KK", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+
+        -- vim.keymap.set("n", "<Leader>lay", rust_tool.inlay_hints.enable, opts)
+        -- vim.keymap.set("n", "<Leader>!lay", rust_tool.inlay_hints.disable, opts)
+        vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+
 
         -- Code action groups
         vim.keymap.set("n", "<Leader>a", rust_tool.code_action_group.code_action_group, { buffer = bufnr })
@@ -74,6 +80,8 @@ local servers = {
   "rust_analyzer",
   'sumneko_lua',
   'terraformls',
+  'graphql',
+  'tsserver',
 }
 
 local settings = {
@@ -91,11 +99,7 @@ local settings = {
 
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
-  ensure_installed = {
-    'sumneko_lua',
-    'solargraph',
-    'rust_analyzer',
-  },
+  ensure_installed = servers,
   automatic_installation = true,
 })
 

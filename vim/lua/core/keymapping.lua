@@ -48,6 +48,8 @@ vim.keymap.set('n', 's[', [[<S-^>]], opts)
 
 -- copy all line
 vim.keymap.set('n', 'cal', [[gg"*yG<CR>]])
+-- copy file path
+vim.keymap.set('n', 'caf', [[:!echo -n % | pbcopy<CR>]])
 
 -- add quote
 vim.keymap.set('n', 'qs', [[normal mpea'<ESC>bi'<ESC>`pl]], opts)

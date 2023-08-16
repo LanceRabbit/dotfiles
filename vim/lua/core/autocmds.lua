@@ -58,6 +58,11 @@ augroup('Filetype', {
     pattern = { '*.tf' },
     command = [[set filetype=tf]]
   },
+  {
+    event = { 'BufRead', 'BufNewFile' },
+    pattern = { '*.hcl' },
+    command = [[set filetype=hcl]]
+  },
 })
 
 augroup('Golang', {
