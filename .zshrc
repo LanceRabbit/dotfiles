@@ -91,6 +91,12 @@ alias gcm="git checkout master"
 alias gst="git stash"
 alias gstp="git stash pop"
 alias gcp="git cherry-pick"
+alias kl='kubectl'
+alias kx='kubectx'
+alias kctx="kubectx"
+alias kctl="kubectl"
+alias kctld="kubectl describe "
+alias kpods="kubectl get pods"
 
 alias vim="nvim"
 alias vi="nvim"
