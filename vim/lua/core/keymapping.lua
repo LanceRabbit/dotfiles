@@ -1,5 +1,8 @@
+-- Memo:
+-- `y + i + ' or "`: 複製  `''` or `""` 內的文字
+-- `vi + '`:  選擇 `'abcde'` quotes 內的文字
+
 -- TODO: keymap function
---
 
 local opts = { noremap = true, silent = true }
 
@@ -65,8 +68,13 @@ vim.keymap.set('v', 'dl', [[:normal $x<CR>]])
 vim.keymap.set('n', '<S-U>', [[ddkkp]], opts)
 vim.keymap.set('n', '<S-D>', [[ddp]], opts)
 
+-- move the current line of code to up or down
 vim.keymap.set('v', '<C-j>', ':m .+1<CR>==')
 vim.keymap.set('v', '<C-k>', ':m .-2<CR>==')
+
+-- move the block text to up or down
+vim.keymap.set('v', '<S-U>', 'dkPV`')
+vim.keymap.set('v', '<S-D>', 'dpV`')
 
 
 -- Resize with arrows

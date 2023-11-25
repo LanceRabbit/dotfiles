@@ -159,3 +159,14 @@ symbol = " "
 #
 # [spack]
 # symbol = "🅢 "
+
+[kubernetes]
+disabled = true
+symbol = "☸ "
+format = '[$symbol$context( \($namespace\))]($style) in '
+style = "cyan bold"
+# [terraform]
+# disabled = false
+# format = "via [$symbol$workspace]($style) "
+# symbol = "ﰉ "
+# style = "bold 105"

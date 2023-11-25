@@ -9,9 +9,15 @@
   rbi = "!git rebase -i $(git rev-parse --short HEAD~$@) #"
   # order by date
   # git log -4 --pretty=format:'%at %h' | sort -g | cut -d ' ' -f 2 | pbcopy
-  gid = "!git log -$@ --pretty=format:'%h' | cut -d ' ' -f 1 | pbcopy #"
+  gid = "!git log -$@ --pretty=format:'%h' | cut -d ' ' -f 1 | cat -n | sort -r | awk '{printf(\"%s \",$2)}' | pbcopy #"
   # $1: show log lines, $2: specific line
-  sid = "!git log -$1 --pretty=format:'%h' | cut -d ' ' -f 1 | sed -n $2p | pbcopy #"
+  # fetch by range: git sid 8 '5,8'
+  # cat -n: add number for sorting that avoid order by commit hash
+  # sorting by reverse order, combine the multi-line as one line
+  # example:
+  # target: f9e73e58c0 890aba5505 d60a85d85a fc4fd19470
+  # expected: fc4fd19470 d60a85d85a 890aba5505 f9e73e58c0
+  sid = "!git log -$1 --pretty=format:'%h' | cut -d ' ' -f 1 | sed -n $2p | cat -n | sort -r | awk '{printf(\"%s \",$2)}' | pbcopy #"
   # cherry-pick all gid, e.g. git pick-all a123a b456b
   pick-all = "! f() { \
     for l in $@; do \
