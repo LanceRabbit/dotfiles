@@ -87,19 +87,17 @@ return packer.startup(function(use)
 
   -- Telescope
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim',
     config = function()
       require('config.telescope')
     end
   }
 
   -- tools
-  -- use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
-
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+    -- commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
     config = function()
       require('config.treesitter')
     end

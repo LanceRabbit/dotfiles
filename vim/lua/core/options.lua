@@ -11,6 +11,16 @@ vim.cmd 'filetype plugin indent on'
 opt.termguicolors = true
 vim.cmd [[colorscheme hybrid]]
 
+
+-- code folder
+-- zc - Close (fold) the current fold under the cursor.
+-- zo - Open (unfold) the current fold under the cursor.
+-- za - Toggle between closing and opening the fold under the cursor.
+-- zR - Open all folds in the current buffer.
+-- zM - Close all folds in the current buffer.
+opt.foldmethod = 'indent'
+opt.foldlevelstart = 99
+
 -- opt.encoding=utf8
 -- g:airline_powerline_fonts = 1
 
@@ -63,6 +73,8 @@ opt.showcmd = true -- display incomplete commands
 opt.showmode = false -- don't show mode as airline already does
 opt.swapfile = true
 
+
+-- vim.opt.diffopt:append('internal'), which is equivalent to :set diffopt+=internal
 -- clopboard
 opt.clipboard:append("unnamedplus")
 

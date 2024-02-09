@@ -85,7 +85,7 @@ vim.keymap.set('v', '<S-D>', 'dpV`')
 
 
 -- hidden text
-vim.keymap.set('n', 'zf', [[zfip]], opts)
+-- vim.keymap.set('n', 'zf', [[zfip]], opts)
 
 -- change to normal mode while insert mode
 vim.keymap.set('i', 'jj', [[<esc>]], opts)
