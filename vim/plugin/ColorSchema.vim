@@ -24,4 +24,4 @@ if !exists(":SwitchBG")
     command SwitchBG :call s:SwitchBG()
 endif
 
-nmap <silent><unique> <Leader>bg :SwitchBG<CR>
+" nmap <silent><unique> <Leader>bg :SwitchBG<CR>

@@ -85,6 +85,14 @@ return packer.startup(function(use)
   use { 'simrat39/rust-tools.nvim' }
   use { 'mfussenegger/nvim-dap' }
 
+  --
+  --
+  use {
+    'folke/tokyonight.nvim',
+    config = function()
+      require('config.color_scheme')
+    end
+  }
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',

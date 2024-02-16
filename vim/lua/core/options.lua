@@ -9,7 +9,7 @@ vim.cmd 'filetype plugin indent on'
 
 -- Set colorscheme
 opt.termguicolors = true
-vim.cmd [[colorscheme hybrid]]
+-- vim.cmd [[colorscheme hybrid]]
 
 
 -- code folder
