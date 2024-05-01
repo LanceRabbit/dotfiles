@@ -1,12 +1,13 @@
-require'plugins'
+-- require'pakcer'
 
 -- require custom configuration
 local modules = {
+  'core.lazy',
   'core.options',
   'core.keymapping',
   'core.autocmds',
-  'config.lsp',
-  'config.cmp',
+  -- 'config.lsp',
+  -- 'config.cmp',
 }
 
 for _, module in ipairs(modules) do
@@ -15,4 +16,3 @@ for _, module in ipairs(modules) do
     error('Error loading ' .. module .. '\n\n' .. err)
   end
 end
-
