@@ -175,3 +175,6 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/lancelin/Library/Caches/heroku/autocomplete/zsh_
 # [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 eval "$(starship init zsh)"
+
+# --zsh options are only available in fzf 0.48.0 or later.
+eval "$(fzf --zsh)"

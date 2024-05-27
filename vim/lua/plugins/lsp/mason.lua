@@ -40,6 +40,8 @@ return {
         -- "svelte",
         "lua_ls",
         "graphql",
+        "tflint",
+        -- "tfsec"
         -- "emmet_ls",
         -- "prismals",
         -- "pyright",
@@ -54,6 +56,8 @@ return {
         -- "isort", -- python formatter
         -- "black", -- python formatter
         -- "pylint",
+        "rubocop",
+        "shfmt",
         "hadolint",
         "eslint_d",
       },
