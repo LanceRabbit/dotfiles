@@ -3,6 +3,11 @@
 -- `vi + '`:  選擇 `'abcde'` quotes 內的文字
 
 -- cstt -> change html tag -> vim-surround
+-- cit -> change content inside of html tag
+
+-- ~: string convert to upper or lower case
+-- U: string convert to upper case
+-- u: string convert to lower case
 
 -- TODO: keymap function
 
