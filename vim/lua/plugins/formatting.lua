@@ -14,19 +14,33 @@ return {
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
-				yaml = { "prettier" },
+				yaml = { "yamlfix" },
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				-- liquid = { "prettier" },
 				lua = { "stylua" },
 				-- python = { "isort", "black" },
 				ruby = { "rubocop" },
+				-- eruby = { "erb_format" },
 				sh = { "shfmt" },
 			},
 			formatters = {
 				rubocop = {
 					-- args = { "-a", "-f", "quiet", "--stderr", "--stdin", "$FILENAME" },
 					args = { "--server", "--auto-correct-all", "--stderr", "--force-exclusion", "--stdin", "$FILENAME" },
+				},
+				yamlfix = {
+					-- REF: https://lyz-code.github.io/yamlfix/#quote-basic-values
+					env = {
+						YAMLFIX_SEQUENCE_STYLE = "block_style",
+						YAMLFIX_quote_basic_values = "true",
+						YAMLFIX_quote_representation = '"',
+						YAMLFIX_EXPLICIT_START = "false",
+					},
+				},
+
+				prettier = {
+					prepend_args = { "--quote-props", "preserve", "--single-quote", "true" },
 				},
 			},
 			format_on_save = {
