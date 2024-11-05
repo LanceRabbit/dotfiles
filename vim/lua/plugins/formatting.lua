@@ -23,6 +23,9 @@ return {
 				ruby = { "rubocop" },
 				-- eruby = { "erb_format" },
 				sh = { "shfmt" },
+				tf = { "tfmt" },
+				terraform = { "tfmt" },
+				hcl = { "tfmt" },
 			},
 			formatters = {
 				rubocop = {
@@ -36,9 +39,10 @@ return {
 						YAMLFIX_quote_basic_values = "true",
 						YAMLFIX_quote_representation = '"',
 						YAMLFIX_EXPLICIT_START = "false",
+						YAMLFIX_COMMENTS_REQUIRE_STARTING_SPACE = "false",
+						YAMLFIX_COMMENTS_MIN_SPACES_FROM_CONTENT = "1",
 					},
 				},
-
 				prettier = {
 					prepend_args = { "--quote-props", "preserve", "--single-quote", "true" },
 				},
