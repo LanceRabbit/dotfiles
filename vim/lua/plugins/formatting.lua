@@ -36,8 +36,11 @@ return {
 					-- REF: https://lyz-code.github.io/yamlfix/#quote-basic-values
 					env = {
 						YAMLFIX_SEQUENCE_STYLE = "block_style",
-						YAMLFIX_quote_basic_values = "true",
-						YAMLFIX_quote_representation = '"',
+						YAMLFIX_LINE_LENGTH = 120,
+						-- YAMLFIX_quote_basic_values = "false",
+						-- YAMLFIX_quote_representation = "'",
+						--
+						YAMLFIX_preserve_quotes = "true",
 						YAMLFIX_EXPLICIT_START = "false",
 						YAMLFIX_COMMENTS_REQUIRE_STARTING_SPACE = "false",
 						YAMLFIX_COMMENTS_MIN_SPACES_FROM_CONTENT = "1",
