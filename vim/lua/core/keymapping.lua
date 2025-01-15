@@ -22,7 +22,8 @@ local opts = { noremap = true, silent = true }
 -- save file
 vim.keymap.set("n", "<Leader>w", [[:write<CR>]])
 -- exit without save
-vim.keymap.set("n", "<Leader>x", [[:exit<CR>]], opts)
+-- barbar.lua 設定 <Leader>x 會關閉 buffer
+-- vim.keymap.set("n", "<Leader>x", [[:exit<CR>]], opts)
 -- vim.keymap.set('n', '<Leader>e', '<C-W>q<CR>')
 vim.keymap.set("n", "<Leader>qa", [[:qall!<CR>]], opts)
 
@@ -30,8 +31,10 @@ vim.keymap.set("n", "<Leader>qa", [[:qall!<CR>]], opts)
 vim.keymap.set("n", "<Leader>b", [[<Cmd>Git blame<CR>]])
 
 -- jump on tab
-vim.keymap.set("n", "<S-l>", [[:tabn<CR>]], opts)
-vim.keymap.set("n", "<S-h>", [[:tabp<CR>]], opts)
+-- barbar.lua 設定 會跳到前後的 buffer
+-- vim.keymap.set("n", "<S-l>", [[:tabn<CR>]], opts)
+-- vim.keymap.set("n", "<S-h>", [[:tabp<CR>]], opts)
+
 -- tab
 vim.keymap.set("n", "nt", [[:tabe<CR>]], opts)
 vim.keymap.set("n", "nv", [[:vnew<CR>]], opts)
