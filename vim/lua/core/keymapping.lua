@@ -24,6 +24,7 @@ vim.keymap.set("n", "<Leader>w", [[:write<CR>]])
 -- exit without save
 -- barbar.lua 設定 <Leader>x 會關閉 buffer
 -- vim.keymap.set("n", "<Leader>x", [[:exit<CR>]], opts)
+vim.keymap.set("n", "<Leader>t", [[:exit<CR>]], opts)
 -- vim.keymap.set('n', '<Leader>e', '<C-W>q<CR>')
 vim.keymap.set("n", "<Leader>qa", [[:qall!<CR>]], opts)
 
