@@ -3,14 +3,13 @@ local opt = vim.opt
 local g = vim.g
 
 -- support syntax highlighting
-vim.cmd 'syntax enable'
+vim.cmd("syntax enable")
 -- try to recognize filetypes and load rel' plugins
-vim.cmd 'filetype plugin indent on'
+vim.cmd("filetype plugin indent on")
 
 -- Set colorscheme
 opt.termguicolors = true
 -- vim.cmd [[colorscheme hybrid]]
-
 
 -- code folder
 -- zc - Close (fold) the current fold under the cursor.
@@ -18,15 +17,15 @@ opt.termguicolors = true
 -- za - Toggle between closing and opening the fold under the cursor.
 -- zR - Open all folds in the current buffer.
 -- zM - Close all folds in the current buffer.
-opt.foldmethod = 'indent'
+opt.foldmethod = "indent"
 opt.foldlevelstart = 99
 
--- opt.encoding=utf8
+-- opt.encoding=utf9
 -- g:airline_powerline_fonts = 1
 
 -- Set <space> as the leader key
 -- Note: nvim-lspconf has been taken <space> as function key
-g.mapleader = ' '
+g.mapleader = " "
 
 -- Turn off compatible with vi.
 opt.compatible = false -- set nocompatible
@@ -68,16 +67,14 @@ opt.ttyfast = true
 opt.cursorline = true
 opt.scrolloff = 5 -- show more
 
-opt.backspace = 'indent,eol,start' -- Backspace deletes like most programs in insert mode
+opt.backspace = "indent,eol,start" -- Backspace deletes like most programs in insert mode
 opt.showcmd = true -- display incomplete commands
 opt.showmode = false -- don't show mode as airline already does
 opt.swapfile = true
 
-
 -- vim.opt.diffopt:append('internal'), which is equivalent to :set diffopt+=internal
 -- clopboard
 opt.clipboard:append("unnamedplus")
-
 
 -- syntax highlighter
 g.go_highlight_functions = 1
@@ -90,7 +87,6 @@ g.go_highlight_build_constraints = 1
 g.go_fmt_autosave = 1
 g.go_fmt_command = "goimports"
 
-
 g.rails_ctags_arguments = [['--languages=ruby --exclude=.git --exclude=log .']]
 
 -- FIX
@@ -98,7 +94,7 @@ g.rails_ctags_arguments = [['--languages=ruby --exclude=.git --exclude=log .']]
 -- fixed ctags not working on Neovim
 -- ref: https://github.com/neovim/neovim/issues/17463
 -- opt.tags = vim.o.tags .. ',' .. vim.fn.expand('~') .. '/tags/global-tags'
-opt.tags:append('./tags')
+opt.tags:append("./tags")
 
 -- fix snipMate waring
 -- g.snipMate = { 'snippet_version': 1 }

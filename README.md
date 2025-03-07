@@ -51,6 +51,9 @@ softlink folder for nvim
 
 ```shell
 ln -s ~/.dotfiles/vim ~/.config/nvim
+# lazyvim
+ln -s ~/.dotfiles/lazyvim ~/.config/nvim
+
 ```
 
 ## OS X defaults setting

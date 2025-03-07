@@ -15,6 +15,7 @@ return {
 				html = { "prettier" },
 				json = { "prettier" },
 				yaml = { "yamlfix" },
+				yml = { "yamlfix" },
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				-- liquid = { "prettier" },
