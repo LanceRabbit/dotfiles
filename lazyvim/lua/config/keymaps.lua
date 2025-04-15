@@ -1,6 +1,8 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+--
+-- S-h => 顯示所有隱藏檔案
 
 -- copy all line
 vim.keymap.set("n", "<leader>al", [[gg"*yG<CR>]], { desc = "copy all line" })

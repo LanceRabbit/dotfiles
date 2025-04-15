@@ -31,9 +31,9 @@ return {
         ruby = { "rubocop" },
         -- eruby = { "erb_format" },
         sh = { "shfmt" },
-        tf = { "tfmt" },
-        terraform = { "tfmt" },
-        hcl = { "tfmt" },
+        tf = { "tflint" },
+        terraform = { "tflint" },
+        hcl = { "tflint" },
       },
       formatters = {
         rubocop = {
