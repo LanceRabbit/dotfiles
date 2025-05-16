@@ -3,6 +3,9 @@
 -- Add any additional keymaps here
 --
 -- S-h => 顯示所有隱藏檔案
+-- ~: string convert to upper or lower case
+-- U: string convert to upper case
+-- u: string convert to lower case
 
 -- copy all line
 vim.keymap.set("n", "<leader>al", [[gg"*yG<CR>]], { desc = "copy all line" })
