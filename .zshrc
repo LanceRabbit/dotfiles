@@ -148,6 +148,7 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
 # export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
 # export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+export PATH="/opt/homebrew/bin/python3:$PATH"
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -178,3 +179,7 @@ eval "$(starship init zsh)"
 
 # --zsh options are only available in fzf 0.48.0 or later.
 eval "$(fzf --zsh)"
+
+autoload -Uz compinit
+compinit
+source <(kubectl completion zsh)

@@ -7,6 +7,9 @@
 -- U: string convert to upper case
 -- u: string convert to lower case
 
+-- Remove value in []
+-- di + [
+
 -- copy all line
 vim.keymap.set("n", "<leader>al", [[gg"*yG<CR>]], { desc = "copy all line" })
 -- copy file path

@@ -2,6 +2,8 @@
 --   return {}
 -- end
 
+-- format 檔案內容設定
+
 return {
   "stevearc/conform.nvim",
   opts = function()
@@ -34,6 +36,8 @@ return {
         tf = { "tflint" },
         terraform = { "tflint" },
         hcl = { "tflint" },
+        -- 要先裝 codespell, 可以用 brew install codespell
+        ["*"] = { "codespell" },
       },
       formatters = {
         rubocop = {
@@ -44,7 +48,7 @@ return {
           -- REF: https://lyz-code.github.io/yamlfix/#quote-basic-values
           env = {
             YAMLFIX_SEQUENCE_STYLE = "block_style",
-            YAMLFIX_LINE_LENGTH = 120,
+            YAMLFIX_LINE_LENGTH = 400,
             -- YAMLFIX_quote_basic_values = "false",
             -- YAMLFIX_quote_representation = "'",
             --
