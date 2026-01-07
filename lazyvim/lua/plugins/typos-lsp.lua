@@ -17,6 +17,12 @@ return {
             "markdown",
             "gitcommit",
           },
+          init_options = {
+            -- 指定設定檔路徑
+            --~/.dotfiles/my_dictionary/custom_dict.txt
+            config = vim.fn.expand("~/.dotfiles/typos/typos.toml"),
+            diagnosticSeverity = "Warning",
+          },
         },
       },
     },

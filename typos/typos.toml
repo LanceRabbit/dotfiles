@@ -1,0 +1,23 @@
+# [type.rb]
+# # Ruby 特定設定
+# extend-words = { enrollalbe = "enrollable" }
+#
+#
+#
+[default.extend-words]
+csutom = "custom"
+Dateloader = "Dataloader"
+enrollalbe = "enrollable"
+# tenant_enrollalbe_id = "tenant_enrollable_id"
+# tenant_enrollalbe = "tenant_enrollable"
+lodaer = "loader"
+nmae = "name"
+preent = "present"
+tneant = "tenant"
+teant = "tenant"
+disalbe = "disable"
+exisit = "exist"
+retunrs = "returns"
+learing = "learning"
+arugment = "argument"
+anaylytic = "analytic"
