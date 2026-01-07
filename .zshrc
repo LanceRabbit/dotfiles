@@ -103,6 +103,8 @@ alias vi="nvim"
 
 alias s_zshrc="source ~/.zshrc"
 alias dockerapp="open -a Docker"
+# 要先啟動 colima 才可以執行 dokcer
+alias run_colima="colima start --cpu 2 --memory 4 --disk 64"
 
 
 # You may need to manually set your language environment
@@ -183,3 +185,8 @@ eval "$(fzf --zsh)"
 autoload -Uz compinit
 compinit
 source <(kubectl completion zsh)
+
+# 避免被干擾
+# ~/.oh-my-zsh/plugins/history/history.plugin.zsh
+# alias hl='history | less'
+# unalias hl

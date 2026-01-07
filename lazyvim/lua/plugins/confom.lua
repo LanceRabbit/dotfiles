@@ -30,14 +30,14 @@ return {
         -- liquid = { "prettier" },
         lua = { "stylua" },
         -- python = { "isort", "black" },
-        ruby = { "rubocop" },
+        ruby = { "rubocop", "codespell" },
         -- eruby = { "erb_format" },
         sh = { "shfmt" },
         tf = { "tflint" },
         terraform = { "tflint" },
         hcl = { "tflint" },
         -- 要先裝 codespell, 可以用 brew install codespell
-        ["*"] = { "codespell" },
+        -- ["*"] = { "codespell" },
       },
       formatters = {
         rubocop = {
@@ -60,6 +60,15 @@ return {
         },
         prettier = {
           prepend_args = { "--quote-props", "preserve", "--single-quote", "true" },
+        },
+        codespell = {
+          -- dictionary 參考 https://github.com/codespell-project/codespell/blob/main/codespell_lib/data/dictionary.txt
+          prepend_args = {
+            "-D",
+            vim.fn.expand("~/.dotfiles/my_dictionary/custom_dict.txt"),
+            "-w",
+          },
+          timeout_ms = 10000,
         },
       },
       -- format_after_save = {
