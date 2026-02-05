@@ -96,11 +96,8 @@ augroup("Filetype", {
     pattern = { "*.slim" },
     command = [[set filetype=slim]],
   },
-  {
-    event = { "BufRead", "BufNewFile" },
-    pattern = { "*.tf" },
-    command = [[set filetype=tf]],
-  },
+  -- 移除 *.tf 的 filetype 覆寫，Neovim 預設會偵測為 terraform
+  -- 這樣 conform (terraform_fmt)、LSP、TreeSitter 才能正常運作
   {
     event = { "BufRead", "BufNewFile" },
     pattern = { "*.hcl" },
